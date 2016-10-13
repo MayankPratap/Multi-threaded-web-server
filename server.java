@@ -1,21 +1,24 @@
 import java.net.*;
 import java.io.*;
+import java.util.Scanner;
 
-public class KKMultiServer{
+public class server{
+
+    public static String pathname;
 
    public static void main(String[] args) throws IOException{
 
-      if(args.length!=1){
+      if(args.length!=2){
 
-         System.err.println("Use as: java KKMultiServer <root directory>");
+         System.err.println("Use as: java KKMultiServer <root directory> <port>");
          System.exit(1);
 
       }
 
 
-      int port=8000;
-
-      String rootDir=args[0];
+      int port=Integer.parseInt(args[1]);
+     
+      pathname=args[0];
 
       boolean listening = true;
 
@@ -23,14 +26,16 @@ public class KKMultiServer{
 
          while(listening){
 
-            new KKMultiServerThread(serverSocket.accept()).start();
+            new serverthreads(serverSocket.accept()).start();
 
          }
           
       }catch(IOException e){
 
           System.err.println("Could not listen on port "+port);
-          System.exit(-1);   
+          System.exit(-1);
+          
+
       }
    }
 }
