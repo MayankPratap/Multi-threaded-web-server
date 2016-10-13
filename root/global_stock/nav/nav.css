@@ -1,0 +1,109 @@
+@import url("/global_stock/css/carleton_basic_rules.css");
+html,body,#carlNav ul,#carlNav li,#carlNav h1,#carlNav form,#carlNav input {  margin:0; padding:0; }
+#carlNav a { text-decoration:none; }
+#carlNav img { border:none; }
+
+/* General rules */
+body { font-size:100%; }
+
+/* Sets font size to a standard .
+Technique borrowed from http://www.alistapart.com/articles/howtosizetextincss
+Now...
+px	em
+16	1
+15	0.9375
+14	0.875
+13	0.8125
+12	0.75
+11	0.6875
+10	0.625
+9	0.5625
+8	0.5
+*/
+
+
+/* Navigation rules */
+
+/* Self-clearing for w3c browsers */
+#carlNav:after, #carlNavWrap:after {
+    content:".";
+    display:block;
+    visibility:hidden;
+    clear:both;
+    height:0;
+}
+/* Force layout in IE6 */
+* html #carlNav, * html #carlNavWrap {
+	display:inline-block;
+}
+/* Force layout in IE7 */
+#carlNav, #carlNavWrap {
+	min-height:1px;
+}
+/* Hide from IE Mac \*/
+#carlNav, #carlNavWrap {
+	display:block;
+}
+/* End hide */
+/* End self-clearing rules */
+
+#carlNav ul { list-style:none; }
+#carlNavWrap { background:#231e5f url("img/bg.gif") repeat-x 0 -28px; color:#fff; border-bottom:2px solid #fff; width:100%; text-align:left; }
+#carlNavWrap, #carlNavWrap input { font-family:Arial, Helvetica, "Lucida Grande", Verdana, sans-serif; }
+#carlNavWrap a { color:#fff; }
+#carlNav { background:transparent url('img/cc_compact.gif') no-repeat; padding-top:1px; position:relative; }
+#carlHome { font-family:Kennerley-Bold, KennerleyOSBQ-Medium, FBCalifornian-Bold, Georgia, Garamond, "Times New Roman", Times, serif; font-weight:normal; letter-spacing:.05em; float:left; width:298px; height:53px; }
+/* MacIE hide \*/
+#carlHome a { display:block; margin:9px 0 0 16px; position:relative; left:0; width:282px; height:44px; overflow:hidden; text-shadow:#000 0px 2px 3px; }
+#carlHome a span { display:block; position:absolute; width:100%; height:100%; background:transparent url('img/cc_compact.gif') no-repeat -16px -10px; }
+/* end hide */
+#carlHome a:hover { color:#ffc; cursor:pointer; }
+#combinedSearch { position:absolute; right:0; margin:12px 16px 0 298px; /* MacIE hide \*/ margin-top:23px; /* end hide */ text-align:right; }
+#combinedSearch .elements, #combinedSearch form { display:inline; }
+/* MacIE hide \*/
+#combinedSearch .finders, #combinedSearch form { float:right; }
+/* end hide */
+#combinedSearch .finders { font-size:0.625em; padding-bottom:1px; /* MacIE hide \*/ text-align:left; /* end hide */ margin-left:10px; }
+#combinedSearch .finders .az { margin-bottom:2px; }
+#combinedSearch .finders a { border-bottom:1px dotted #fff; }
+#combinedSearch .finders a:hover { border-bottom:1px solid #fff; }
+/* MacIE hide \*/
+label#combinedSearchInputLabel .xtr { display:block; position:absolute; left:-9999px; }
+/* end hide */
+#combinedSearch label { font-size:0.875em; }
+#combinedSearch .input {
+	border:1px solid #000;
+	padding:2px 3px;
+	font-size:0.8125em;
+	background:#d7d6e1 url('/global_stock/css/homepage/images/search.gif') no-repeat;
+	color:#111;
+}
+#combinedSearch .labelText {
+	color:#888;
+}
+#combinedSearch .submit {
+	border:none;
+	padding:1px 2px 3px 2px;
+	margin-top:-1px;
+	background-color:#336226;
+	color:#fff;
+	font-size:0.8125em;
+	border:1px solid #232658;
+}
+#combinedSearch .submit:hover {
+	background-color:#376e28;
+	cursor:pointer;
+}
+#carlTabs {clear:both; padding:5px 0 0 16px; min-width:765px; }
+* html #carlTabs { width:780px; }
+#carlTabs ul, #carlTabs li { float:left; }
+#carlTabs li {  border-top:1px solid #fff; }
+#carlTabs ul {  font-size:0.8125em; }
+#carlTabs a { white-space:nowrap; background:#efee80 url('img/tab_bg.gif') repeat-x; color:#15265f; display:block; padding:6px 9px 0 9px; height:17px; border-right:1px solid #fff; }
+* html #carlTabs a { float:left; }
+#carlTabs a:hover { background:#ffff9b url('img/tab_bg.gif') repeat-x 0 -27px; }
+#carlTabs .sel a { background:#fff url('img/tab_bg_sel.gif') repeat-x 0 -15px; }
+#carlTabs .sel a:hover { background-position:0 12px; }
+#carlTabs .home a, #carlTabs .prosp a { border-left:1px solid #fff; }
+#carlTopics ul { margin-right:16px; }
+

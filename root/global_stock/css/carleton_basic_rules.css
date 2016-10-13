@@ -1,0 +1,47 @@
+body {
+	background:#fff; margin:0; padding:0; 
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:100%; /* Redundant with nav.css, but it doesn't hurt to be safe */
+}
+
+#breadcrumbs, .locationBarText {
+	background-color:#231e5f;
+	font-size:0.625em; /* This assumes the breadcrumbs are outside the wrapper. This may not be a safe assumption. */
+	color:#efee80;
+	padding:3px 16px;
+	text-align:left;
+}
+#breadcrumbs a, .locationBarText a {
+	color:#fff;
+}
+
+#wrapper #breadcrumbs {
+	font-size:0.769em;
+}
+/* IMPORTANT NOTE: this sets the default text size to 13px across all browsers. To set any text inside the wrapper you should use ems, assuming 13px as the base value */
+/* So, for anything inside #wrapper: */
+/* 8px = 0.615em; 9px = 0.692em; 10px = 0.769em; 11px = 0.846em; 12px = 0.923em; 13px = 1em; 14px = 1.077em; 15px = 1.154em; 16px = 1.231em; 17px = 1.308em; 18px = 1.385em; */
+/* If the html does not have a wrapper div, you may want to create one and either give it id "wrapper" or add a stylesheet that gives it the same rule as below */
+#wrapper { font-size:0.8125em; }
+
+h4 { font-size:1.154em; }
+.smallText { font-size:0.769em; }
+.maintained { font-size:0.769em; color: #666; }
+.maintained .smallText { font-size:1em; }
+.callOut { background: #ffc; margin: 1em; padding: 1em; border: 1px dashed #fc0; }
+hr.blueDash { height: 1px; border-style: dashed; color: #8AA3D0; background-color: #8AA3D0; }
+.colorBlockFormat { background: #E9EEF8; padding: 5px 0px 5px 10px; }
+img.lokiInserted { margin:10px; }
+ol.upperRoman { list-style-type: upper-roman; }
+ol.lowerRoman { list-style-type: lower-roman; }
+ol.upperAlpha { list-style-type: upper-alpha; }
+ol.lowerAlpha { list-style-type: lower-alpha; }
+ol.decimal { list-style-type: decimal; }
+
+/* Deprecated rules */
+
+.bgFFFFCC { background-color: #ffc; }
+.bgFFFF99 { background-color: #e9eef8; } 
+.bg99CCFF { background-color: #d9e2f4; }
+.bgCCCCCC { background-color: #ccc; }
+.bgE8E8E8 { background-color: #e8e8e8; }

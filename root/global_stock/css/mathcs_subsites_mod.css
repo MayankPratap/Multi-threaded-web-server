@@ -1,0 +1,36 @@
+div.content h3 {
+	color: #000066;
+	border-top: 1px solid #C8D5EF;
+	padding-top: 0.5em;
+}
+table.layoutTable {
+	width: 100%;
+}
+table.layoutTable td.navigationTD {
+	width: 20%;
+}
+table.bannerTable {
+	background-image: url(../images/mathcs_subsite_bg.gif);
+	background-repeat: repeat-y;
+	background-position: -150px 0px;
+	background-color: #4969A8;
+}
+table.bannerTable h1 {
+	padding-top:20px;
+}
+#wrapper {
+	position:relative;
+}
+#breadcrumbs {
+	background:transparent;
+	padding:0;
+	position:absolute;
+	left:250px;
+	color:#B4CBE2;
+}
+#breadcrumbs a {
+	color:#D0DCEB;
+}
+#breadcrumbs a:hover {
+	color:#E7EFF8;
+}

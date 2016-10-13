@@ -1,0 +1,49 @@
+@import url("dept_styles_mod_new.css");
+table.bannerTable {
+	background-image: none;
+	background-color: #8AA3D0;
+	color: #FFFFFF;
+}
+.bannerInfo {
+	padding: 0px;
+}
+.siteName {
+	text-align: center;
+	padding: 6px;
+}
+h1.siteName a.siteLink {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.layout {
+	padding: 0px;
+	margin-bottom: 20px;
+}
+.content {
+	padding-right: 5px;
+	padding-left: 20px;
+	margin: 0px;
+	margin-top: 20px;
+}
+.sidebar {
+	margin-right: 20px;
+	margin-top: 30px;
+}
+.navLink {
+	text-decoration: none;
+	color: #000099;
+}
+#footer {
+	background-color: #FFFFFF;
+	border-top-width: 0px;
+	padding: 10px;
+	text-align: right;
+	margin-top: 50px;
+}
+.navListTop {
+	margin-left: 20px;
+}
+.textOnlyLink {
+	margin: 0px;
+	border: none;
+}
