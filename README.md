@@ -17,6 +17,12 @@ A web server program which serves a page to multiple clients simulataneously. Th
 
 - 5) Run the  client program which requests our web server process ```java client localhost portnumber```
 
+  ### Alternate Method
+  
+  - 1) Run the server program.
+  
+  - 2) Open browser and fire localhost:portNumber/index.html
+
 ## To do 
 
 - Transmitting images and other files to the requesting client.
