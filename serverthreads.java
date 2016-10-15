@@ -14,7 +14,7 @@ public class serverthreads extends Thread{
       super("IloveThreads");
       this.socket = socket;
 
-      pathname=new server().pathname;
+     // pathname=new server().pathname;
 
    }
 
@@ -29,24 +29,29 @@ public class serverthreads extends Thread{
 
          String inputLine,outputLine;
 
-         File file = new File(pathname);
+         inputLine = inFromClient.readLine(); 
+
+         //System.out.println(inputLine);
+         int len=inputLine.length();
+
+         pathname = inputLine.substring(4,len-9);
+         System.out.println(pathname);
+
+         File file = new File("/home/mayank/Documents/opensource/webserver/root/"+pathname);
+
          StringBuilder fileContents = new StringBuilder((int)file.length());
          Scanner scanner = new Scanner(file);
          String lineSeperator = System.getProperty("line.seperator");
-
        
           
-            while(scanner.hasNextLine()){
+         while(scanner.hasNextLine()){
+            fileContents.append(scanner.nextLine()+lineSeperator);
+         }
 
-              fileContents.append(scanner.nextLine()+lineSeperator);
-
-            }
-
-            outputLine=fileContents.toString();
+         outputLine=fileContents.toString();
            // System.out.println("Hello");
-            outToClient.println(outputLine);
-
-            socket.close();
+         outToClient.println(outputLine);
+         socket.close();
         
          
       }catch(IOException e){

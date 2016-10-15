@@ -8,17 +8,16 @@ public class server{
 
    public static void main(String[] args) throws IOException{
 
-      if(args.length!=2){
+      if(args.length!=1){
 
-         System.err.println("Use as: java KKMultiServer <root directory> <port>");
+         System.err.println("Use as: java <port>");
          System.exit(1);
 
       }
 
 
-      int port=Integer.parseInt(args[1]);
-     
-      pathname=args[0];
+      int port=Integer.parseInt(args[0]);
+      
 
       boolean listening = true;
 

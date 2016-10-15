@@ -8,7 +8,7 @@ public class client{
 
       if(args.length!=2){
 
-          System.err.println("Use as : java KnockKnockClient <host name> <port number>");
+          System.err.println("Use as : java <host name> <port number>");
 
           System.exit(1);
 
@@ -18,24 +18,31 @@ public class client{
       int portNumber=Integer.parseInt(args[1]);
 
       try(Socket clientSocket=new Socket(hostName,portNumber);
-      	 // PrintWriter outToServer=new PrintWriter(clientSocket.getOutputStream(),true);
-      	  BufferedReader inFromServer=new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));){
-
-        //  BufferedReader inFromUser=new BufferedReader(new InputStreamReader(System.in));
-
+      	 PrintWriter outToServer=new PrintWriter(clientSocket.getOutputStream(),true);
+      	  BufferedReader inFromServer=new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));    BufferedReader inFromUser=new BufferedReader(new InputStreamReader(System.in));){
+          
           String fromServer;
-          //fromUser;
+          String fromUser;
+
+          fromUser=inFromUser.readLine();
+          outToServer.println(fromUser);
+
+          //System.out.println("Ye lo!!");
+         // System.out.println();
+
 
           while((fromServer=inFromServer.readLine())!=null){
 
-              System.out.println("Server: "+fromServer);
+               if(fromServer.equals("Bye."))
+                 break;
 
-              if(fromServer.equals("Bye."))
-              	 break;
 
-           //   fromUser=inFromUser.readLine();
+              System.out.println(fromServer);
 
-            /*  if(fromUser!=null){
+             
+              //   fromUser=inFromUser.readLine();
+
+              /*  if(fromUser!=null){
 
                  System.out.println("Client: "+fromUser);
                  outToServer.println(fromUser);
